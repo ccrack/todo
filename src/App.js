@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Routes, Route} from "react-router-dom";
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import React from "react";
 import "./App.css";
 import todo from "./components/todo/todo";
@@ -8,14 +8,33 @@ import about from "./components/about/about";
 function App() {
   return (
     <div className="App">
-      <h2>hello react</h2>
-
       <BrowserRouter>
-        <ul>
-          <li><Link to="/"> homme</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
+        <nav>
+          <div className="hamburger">
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
+          <ul className="menu">
+            <li className="menu-item">
+              <Link className="link" to="/">
+                TODO
+              </Link>
+            </li>
+            <li className="menu-item">
+              <Link className="link" to="/contact">
+                CONTACT
+              </Link>
+            </li>
+            <li className="menu-item">
+              <Link className="link" to="/about">
+                ABOUT
+              </Link>
+            </li>
+          </ul>
+          <h2 className="logo-name">TODO LIST APP</h2>
+        </nav>
+
         <Routes>
           <Route path="/" Component={todo}></Route>
           <Route path="/contact" Component={contact}></Route>

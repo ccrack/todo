@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.5 ease-in-out;
+  background-color: white;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: black;
+  min-height: 50px;
+  width: 100%;
+}
+.logo-name {
+  font-size: 1.2rem;
+  color: rgb(122, 122, 122);
+  cursor: pointer;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.menu .menu-item {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+}
+ 
