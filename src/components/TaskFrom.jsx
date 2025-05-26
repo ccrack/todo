@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './TaskFrom.css'
 
 export default function TaskFrom({addTask}) {
     const [text, setText] = useState('');
@@ -11,7 +12,7 @@ export default function TaskFrom({addTask}) {
     }
   return (
    <form onSubmit={handleSubmit}>
-        <input value={text} onChange={e => setText(e.target.value)} placeholder='Enter new task'/>
+        <input type="text" value={text} onChange={e => setText(e.target.value)} placeholder='Enter new task'/>
         <button type='submit'>Add</button>
    </form>
   )

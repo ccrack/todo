@@ -1,0 +1,16 @@
+.btn-delete{
+    width: 20px;
+    align-items: center;
+    border-radius: 50px;
+    border: none;
+    font-size: 0.9rem;
+    border: 1px solid black;
+    background-color: red;
+    color: white;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+    align-self: flex-end;
+}
+li{
+    align-self: flex-start;
+}

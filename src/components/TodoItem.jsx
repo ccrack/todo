@@ -1,4 +1,5 @@
 import React from "react";
+import './TodoItem.css'
 
 export default function TodoItem({ todo }) {
   return (
@@ -6,7 +7,7 @@ export default function TodoItem({ todo }) {
       <span>
           {todo.text}
       </span>
-      <button>X</button>
+      <button className="btn-delete">X</button>
     </li>
   );
 }
