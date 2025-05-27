@@ -1,5 +1,8 @@
+form{
+    padding: 0 20px;
+}
 input[type='text']{
-    width: 300px;
+    width: 20vw;
     height: 30px;
     border-radius: 50px 0 0 50px;
     padding: 10px;
@@ -10,7 +13,7 @@ input[type='text']{
 }
 button[type='submit']{
     height: 30px;
-    width: 70px;
+    width: 10vw;
     border: none;
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.21);
     border-left: 1px solid rgb(102, 102, 102);

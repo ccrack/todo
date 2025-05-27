@@ -9,8 +9,11 @@
     color: white;
     font-family: arial, sans-serif;
     cursor: pointer;
-    align-self: flex-end;
+    margin-left: 10px;
 }
-li{
-    align-self: flex-start;
+.list-item{
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    padding: 10px 10px;
 }
