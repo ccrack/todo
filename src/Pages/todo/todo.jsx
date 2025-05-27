@@ -26,14 +26,24 @@ export default function Todo() {
   };
 
   return (
-    <div className="todo-container">
-      <h1 className="todo-title">Todos List</h1>
-      <TaskFrom addTask={addTask} />
-      <TodoList
-        todos={todos}
-        removeTask={removeTask}
-        conpletedTask={conpletedTask}
-      />
+    <div>
+      <section className="todo-container">
+        <h1 className="todo-title">Todos List</h1>
+        <TaskFrom addTask={addTask} />
+        <TodoList
+          todos={todos}
+          removeTask={removeTask}
+          conpletedTask={conpletedTask}
+        />
+      </section>
+
+      <label className="lb-show">Show:</label>
+      <div className="btns-filter">
+        <button className="btn btn-all">All</button>
+        <button className="btn btn-completed">Completed</button>
+        <button className="btn btn-incomplete">Incomplete</button>
+      </div>
+
     </div>
   );
 }
