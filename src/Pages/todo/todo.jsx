@@ -5,6 +5,7 @@ import "./todo.css";
 
 export default function Todo() {
   const [todos, setTodos] = useState([]);
+  const [filter, setFilter] = useState('all');
 
   /* add todo method */
   const addTask = (text) => {
@@ -25,13 +26,20 @@ export default function Todo() {
     );
   };
 
+    /*filtered method */
+    const filtered = todos.filter(todo =>
+      filter === 'all'? true:
+      filter === 'completed'? todo.completed:
+      !todo.completed
+    );
+
   return (
     <div>
       <section className="todo-container">
         <h1 className="todo-title">Todos List</h1>
         <TaskFrom addTask={addTask} />
         <TodoList
-          todos={todos}
+          todos={filtered}
           removeTask={removeTask}
           conpletedTask={conpletedTask}
         />
@@ -39,9 +47,9 @@ export default function Todo() {
 
       <label className="lb-show">Show:</label>
       <div className="btns-filter">
-        <button className="btn btn-all">All</button>
-        <button className="btn btn-completed">Completed</button>
-        <button className="btn btn-incomplete">Incomplete</button>
+        <button className="btn btn-all" onClick={() => setFilter('all')}>All</button>
+        <button className="btn btn-completed" onClick={() => setFilter('completed')}>Completed</button>
+        <button className="btn btn-incomplete" onClick={() => setFilter('incomplete')}>Incomplete</button>
       </div>
 
     </div>
