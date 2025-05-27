@@ -4,8 +4,24 @@ import TodoList from "../../components/TodoList";
 import "./todo.css";
 
 export default function Todo() {
-  const [todos, setTodos] = useState([]);
-  const [filter, setFilter] = useState('all');
+  const [todos, setTodos] = useState([
+    {
+      text: "Call Direct Auto Insurance to request coverage change",
+      completed: false,
+      id: "20399400",
+    },
+    {
+      text: "Check if my car loan requires full coverage",
+      completed: false,
+      id: "03998538",
+    },
+    {
+      text: "Fix bug in payment processing module",
+      completed: false,
+      id: "29850345",
+    },
+  ]);
+  const [filter, setFilter] = useState("all");
 
   /* add todo method */
   const addTask = (text) => {
@@ -26,12 +42,14 @@ export default function Todo() {
     );
   };
 
-    /*filtered method */
-    const filtered = todos.filter(todo =>
-      filter === 'all'? true:
-      filter === 'completed'? todo.completed:
-      !todo.completed
-    );
+  /*filtered method */
+  const filtered = todos.filter((todo) =>
+    filter === "all"
+      ? true
+      : filter === "completed"
+      ? todo.completed
+      : !todo.completed
+  );
 
   return (
     <div>
@@ -47,11 +65,22 @@ export default function Todo() {
 
       <label className="lb-show">Show:</label>
       <div className="btns-filter">
-        <button className="btn btn-all" onClick={() => setFilter('all')}>All</button>
-        <button className="btn btn-completed" onClick={() => setFilter('completed')}>Completed</button>
-        <button className="btn btn-incomplete" onClick={() => setFilter('incomplete')}>Incomplete</button>
+        <button className="btn btn-all" onClick={() => setFilter("all")}>
+          All
+        </button>
+        <button
+          className="btn btn-completed"
+          onClick={() => setFilter("completed")}
+        >
+          Completed
+        </button>
+        <button
+          className="btn btn-incomplete"
+          onClick={() => setFilter("incomplete")}
+        >
+          Incomplete
+        </button>
       </div>
-
     </div>
   );
 }
