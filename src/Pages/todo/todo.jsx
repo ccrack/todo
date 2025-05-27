@@ -8,19 +8,32 @@ export default function Todo() {
 
   /* add todo method */
   const addTask = (text) => {
-    setTodos([...todos, { text, completed: false, id: Date.now()}]);
+    setTodos([...todos, { text, completed: false, id: Date.now() }]);
   };
 
   /* remove todo method*/
   const removeTask = (id) => {
-    setTodos(todos.filter(todo => todo.id !== id));
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
+  /*conpleted todo method */
+  const conpletedTask = (id) => {
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
   };
 
   return (
     <div className="todo-container">
       <h1 className="todo-title">Todos List</h1>
       <TaskFrom addTask={addTask} />
-      <TodoList todos={todos} removeTask={removeTask}/>
+      <TodoList
+        todos={todos}
+        removeTask={removeTask}
+        conpletedTask={conpletedTask}
+      />
     </div>
   );
 }
