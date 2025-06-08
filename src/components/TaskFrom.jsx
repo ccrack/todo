@@ -11,7 +11,7 @@ export default function TaskFrom({addTask}) {
         setText('')
     }
   return (
-   <form onSubmit={handleSubmit}>
+   <form className='search-form' onSubmit={handleSubmit}>
         <input type="text" value={text} onChange={e => setText(e.target.value)} placeholder='Enter new task'/>
         <button type='submit'>Add</button>
    </form>
