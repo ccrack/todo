@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
-import todo from "../Pages/todo/Todo";
-import contact from "../Pages/contact/Contact";
+import TodoContainer from "../containers/TodoContainer";
+import ContactContainer from "../containers/ContactContainer";
 import about from "../Pages/about/About"
 import './Navbar.css'
 
@@ -17,7 +17,7 @@ export default function Navbar() {
           </div>
           <ul className="menu">
             <li className="menu-item">
-              <Link className="link" to="/">
+              <Link className="link" to="/todo">
                 TODO
               </Link>
             </li>
@@ -36,8 +36,8 @@ export default function Navbar() {
         </nav>
 
         <Routes>
-          <Route path="/" Component={todo}></Route>
-          <Route path="/contact" Component={contact}></Route>
+          <Route path="/todo" Component={TodoContainer}></Route>
+          <Route path="/contact" Component={ContactContainer}></Route>
           <Route path="/about" Component={about}></Route>
         </Routes>
       </BrowserRouter>

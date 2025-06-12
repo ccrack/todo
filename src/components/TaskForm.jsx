@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import './TaskFrom.css'
+import './TaskForm.css'
 
-export default function TaskFrom({addTask}) {
+export default function TaskForm({addTask}) {
     const [text, setText] = useState('');
 
     const handleSubmit = (e) =>{

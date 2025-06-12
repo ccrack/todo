@@ -1,34 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./contact.css";
 
-const Contact = () => {
-  //create state for each form field
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    comment: "",
-  });
-
-  //handleChange fuction
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
-  // handleSubmit fuction
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let firstN = document.querySelectorAll(".form-item");
-    firstN.forEach((element) => {
-      element.value = "";
-    });
-    alert("Submition successful!");
-  };
+const Contact = ({ formData, handleChange, handleSubmit }) => {
 
   return (
     <div className="contact">
