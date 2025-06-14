@@ -14,7 +14,9 @@ export default function Todo({
     <div>
       <section className="todo-container">
         <h1 className="todo-title">Todos List</h1>
-        <TaskForm addTask={addTask} />
+        <TaskForm 
+          addTask={addTask} 
+        />
         <TodoList
           todos={todos}
           removeTask={removeTask}

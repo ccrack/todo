@@ -1,0 +1,33 @@
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.5 ease-in-out;
+  background-color: white;
+}
+
+/*media query for mobile device max-width: 320 px */
+@media (max-width: 520px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+  }
+  .change:nth-child(2) {
+    opacity: 0;
+  }
+  .change:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .change:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+}

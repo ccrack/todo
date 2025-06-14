@@ -1,19 +1,7 @@
-.navbar{
+.navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  transition: all 0.5 ease-in-out;
-  background-color: white;
 }
 nav {
   display: flex;
@@ -42,4 +30,22 @@ nav {
   text-decoration: none;
   color: rgb(255, 255, 255);
   font-size: 0.9rem;
+}
+@media (max-width: 520px) {
+  .menu{
+    display: none;
+    flex-direction: column;
+  }
+  .menu.open{
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+  }
+  nav {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+.logo-name{
+    color: rgb(202, 202, 202);
+  }
 }

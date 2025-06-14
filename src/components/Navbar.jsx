@@ -1,23 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
 import TodoContainer from "../containers/TodoContainer";
 import ContactContainer from "../containers/ContactContainer";
-import about from "../Pages/about/About"
-import './Navbar.css'
+import about from "../Pages/about/About";
+import "./Navbar.css";
+import Hamburger from "./Hamburger";
 
 export default function Navbar() {
+   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="navbar">
       <BrowserRouter>
         <nav>
-          <div className="hamburger">
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </div>
-          <ul className="menu">
+          <Hamburger isOpen = {isOpen} setIsOpen={setIsOpen}/>
+          <ul className={isOpen ? "menu open" : "menu"} >
             <li className="menu-item">
-              <Link className="link" to="/todo">
+              <Link className="link" to="/">
                 TODO
               </Link>
             </li>
@@ -36,7 +34,7 @@ export default function Navbar() {
         </nav>
 
         <Routes>
-          <Route path="/todo" Component={TodoContainer}></Route>
+          <Route path="/" Component={TodoContainer}></Route>
           <Route path="/contact" Component={ContactContainer}></Route>
           <Route path="/about" Component={about}></Route>
         </Routes>
