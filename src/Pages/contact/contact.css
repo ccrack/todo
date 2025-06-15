@@ -28,3 +28,15 @@
 .form-item[name="comment"] {
   height: 100px;
 }
+
+@media (max-width: 520px) {
+  .form-item {
+    width: 90vw;
+  }
+  .form-contact {
+    align-items: center;
+  }
+  .form-contact button[type="submit"] {
+    width: 50%;
+  }
+}

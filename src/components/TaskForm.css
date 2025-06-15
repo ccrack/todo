@@ -1,21 +1,38 @@
-.search-form{
-    padding: 0 20px;
+.search-form {
+  width: 100%;
+  display: flex;
 }
-.search-form input[type='text']{
-    width: 20vw;
-    height: 30px;
-    border-radius: 50px 0 0 50px;
-    padding: 10px;
-    border: none;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.21);
-    user-select: none;
-    outline: none;
+.search-form input[type="text"] {
+  height: 30px;
+  width: 100%;
+  border-radius: 50px 0 0 50px;
+  padding: 10px;
+  border: none;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.21);
+  user-select: none;
+  outline: none;
 }
-.search-form button[type='submit']{
-    height: 30px;
-    width: 10vw;
+.search-form button[type="submit"] {
+  height: 30px;
+  width: 20%;
+  border: none;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.21);
+  border-left: 1px solid rgb(102, 102, 102);
+  border-radius: 0 50px 50px 0;
+}
+@media (max-width: 500px) {
+  .search-form {
+    width: 100%;
+    flex-direction: column;
+  }
+  .search-form input[type="text"] {
+    border-radius: 0;
+  }
+  .search-form button[type="submit"] {
+    border-radius: 0;
     border: none;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.21);
-    border-left: 1px solid rgb(102, 102, 102);
-    border-radius:0 50px 50px 0;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1rem;
+  }
 }
