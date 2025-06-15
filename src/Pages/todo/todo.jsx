@@ -1,5 +1,5 @@
 import React from "react";
-import TaskForm from "../../components/TaskForm";
+import TaskFormContainer from "../../containers/TaskFormContainer"
 import TodoList from "../../components/TodoList";
 import "./todo.css";
 
@@ -14,7 +14,7 @@ export default function Todo({
     <div>
       <section className="todo-container">
         <h1 className="todo-title">Todos List</h1>
-        <TaskForm 
+        <TaskFormContainer
           addTask={addTask} 
         />
         <TodoList
